@@ -8,5 +8,9 @@
     <app-success-alert></app-success-alert> -->
     <!-- <div app-servers></div> Componenet as attribute-->
     <!-- <div class="app-servers"></div> Componenet as class-->
+    <button class="btn btn-primary" (click)="onDetailToggle()">Show Details</button>
+    <div *ngFor="let logItem of logs"
+    [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text' : logItem >= 5}">{{ logItem }}</div>
   </div>
 </div>

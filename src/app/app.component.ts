@@ -7,10 +7,20 @@ import { Component } from '@angular/core';
   styles : [
     `h3{
       color : dodgerblue;
+    }
+    .white-text{
+      color: white;
     }`
   ]
 })
 
 export class AppComponent {
   name = 'Angular Course';
+  showDetails = false;
+  logs = [];
+  
+  onDetailToggle(){
+    this.showDetails = true;
+    this.logs.push(this.logs.length + 1);
+  }
 }
